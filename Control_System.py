@@ -12,11 +12,11 @@ def check_response_time(command):
     """Simulates command execution and measures response time."""
     start_time = time.time()
     if command == "rotate_joint":
-        time.sleep(0.14)  # Simulate delay for rotate_joint
+        time.sleep(0.19)  # Simulate delay for rotate_joint
     elif command == "move_arm":
-        time.sleep(0.08)  # Simulate moderate response time
+        time.sleep(0.09)  # Simulate moderate response time
     elif command == "adjust_grip":
-        time.sleep(0.06)  # Simulate delayed response
+        time.sleep(0.05)  # Simulate delayed response
     response_time = time.time() - start_time
     return response_time
 
@@ -27,7 +27,7 @@ for cmd in commands:
     print(f"{cmd} response time: {round(response_time, 3)} seconds")
 
 # Define the Expected Response Time for each command
-expected_response_times = [0.10, 0.15, 0.05]  # Expected response times for move_arm, rotate_joint, adjust_grip respectively
+expected_response_times = [0.10, 0.18, 0.09]  # Expected response times for move_arm, rotate_joint, adjust_grip respectively
 
 #Compare the response times to the expected times to Analyze performance
 print("\nCommand Overview:")
